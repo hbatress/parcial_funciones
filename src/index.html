@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/>
+    <link rel="stylesheet" href="./css/base.css">
+    <title>MyDayApp - JS</title>
+  </head>
+  <body>
+    <section class="todoapp">
+      <header class="header">
+        <div class="container">
+          <h1>Mi Dia</h1>
+          <p>Todas mis tareas en un solo lugar</p>
+          <input
+            class="new-todo"
+            placeholder="Escriba una nueva tarea"
+            autofocus
+            type="text"
+          />
+        </div>
+      </header>
+      <div class="container todoapp-wrapper">
+        <!-- Esta sección debe estar oculta de forma predeterminada y mostrarse cuando hay todos -->
+        <section class="main">
+          <ul class="todo-list">
+            <!-- Estos están aquí solo para mostrar la estructura de los elementos de la lista. -->
+            <!-- Los elementos de la lista deben obtener la clase "edición" al editar y "completado" cuando se marcan como completados-->
+            <li class="completed">
+              <div class="view">
+                <input class="toggle" type="checkbox" checked />
+                <label>Aprender JavaScript</label>
+                <button class="destroy"></button>
+              </div>
+              <input class="edit" value="Aprender JavaScript" />
+            </li>
+            <li>
+              <div class="view">
+                <input class="toggle" type="checkbox" />
+                <label>Comprar un unicornio</label>
+                <button class="destroy"></button>
+              </div>
+              <input class="edit" value="Comprar un unicornio" />
+            </li>
+            <li class="editing">
+              <div class="view">
+                <input class="toggle" type="checkbox" />
+                <label>Estudiar para el examen</label>
+                <button class="destroy"></button>
+              </div>
+              <input class="edit" value="Estudiar para el examen" />
+            </li>
+          </ul>
+        </section>
+        <!-- Este pie de página debe estar oculto de forma predeterminada y mostrarse cuando hay todos -->
+        <footer class="footer">
+          <!-- Esto debería ser "Quedan 0 elementos" de forma predeterminada. -->
+          <span class="todo-count"><strong>0</strong> item left</span>
+          <!-- Elimine esto si no implementa el enrutamiento -->
+          <ul class="filters">
+            <li>
+              <a href="#/" class="selected">Todo</a>
+            </li>
+            <li>
+              <a href="#/pending">Pendiente</a>
+            </li>
+            <li>
+              <a href="#/completed">Completedo</a>
+            </li>
+          </ul>
+          <!-- Oculto si no quedan elementos completados ↓ -->
+          <button class="clear-completed">Clear completados</button>
+          <br><br>
+        </footer>
+        <button class="Botones">Agregar</button>
+        <button class="Botones">Limpiar</button>
+      </div>
+    </section>
+
+  </body>
+</html>
